@@ -3,6 +3,8 @@ import g from "glamorous";
 import { css } from "glamor";
 import Link from "gatsby-link";
 
+require("prismjs/themes/prism-solarizedlight.css");
+
 import { rhythm } from "../utils/typography";
 
 const linkStyle = css({ float: `right` })

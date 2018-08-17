@@ -1,9 +1,26 @@
 module.exports = {
   siteMetadata: {
-    title: `Blah Blah Fake Title`,
+    title: `Pandas Eating Lots`,
   },
-  plugins: [
+  plugins: [{
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
+      },
+    },
     `gatsby-plugin-glamor`,
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        classPrefix: "language-",
+        inlineCodeMarker: null,
+        aliases: {},
+        plugins: [
+          `gatsby-remark-prismjs`,
+        ]
+      },
+    },
     {
       resolve: `gatsby-plugin-typography`,
       options: {
